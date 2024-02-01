@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Sales Analyticcs</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Optional CSS -->
+  <link rel="stylesheet" href="/css/layout/style.css">
+  <link rel="stylesheet" href="/css/layout/sidebar.css">
+  <link rel="stylesheet" href="/css/layout/navbar.css">
+  <link rel="stylesheet" href="/css/dash_sales.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <a href="DashboardSales.html">
+          <div>
+            <img id="logo" src="images/logo.png">
+          </div>
+        </a>
+      </div>
+
+      <ul class="list-unstyled components">
+        <li>
+          <a href="DashboardSales.html"><img id="sidebar-icon" src="images/dashboard_icon.png"></a>
+        </li>
+        <li>
+          <a href="ProductManagement.html"><img id="sidebar-icon" src="images/product_icon.png"></a>
+        </li>
+        <li>
+          <a href="OrderManagement.html"><img id="sidebar-icon" src="images/orders_icon.png"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="content">
+
+      <!-- Topbar -->
+      <nav class="navbar navbar-default">
+        <div class="navbar-wrapper container-fluid">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-6 justify-content-start">
+                <div class="navbar-content-left">
+                  <button type="button" id="sidebarCollapse" class="btn navbar-btn">
+                    <img id="topbar-icon" src="images/hamburgerMenu-icon.png">
+                  </button>
+                  <h2>Sales Analytics</h2>
+                </div>
+              </div>
+
+              <div class="col-6 d-flex justify-content-end">
+                <div class="navbar-content-right">
+                  <div class="account-image">
+                    <a href="Login.html">
+                      <img src="images/account_image.png">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card py-2" id="cards1">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-uppercase mb-1" style="color: #DC3545;">sales (MONTHLY)
+                  </div>
+                  <div class="h5 mb-0 font-weight-bold" style="color: #DC3545;">
+                    <h3>₱150,000,000</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card py-2" id="cards2">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-uppercase mb-1" style="color: #28A745;">Revenue (MONTHLY)
+                  </div>
+                  <div class="h5 mb-0 font-weight-bold" style="color: #28a745;">
+                    <h3>₱70,000</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card py-2" id="cards3">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-uppercase mb-1" style="color:#FF9C3B;">profit (MONTHLY)
+                  </div>
+                  <div class="h5 mb-0 font-weight-bold" style="color: #FF9C3B;">
+                    <h3>₱80,000</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card py-2" id="cards4">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-uppercase mb-1" style="color: #0076EF;">Orders (MONTHLY)
+                  </div>
+                  <div class="h5 mb-0 font-weight-bold d-inline-flex" style="color: #0076EF;">
+                    <img class="align-self-center mr-3 mb-3" style="height: 50px;" src="images/box_icon.png">
+                    <h3>30</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    </div>
+    </div>
+
+  </div>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <!-- Optional Javascripts -->
+  <script src="/javascripts/sript.js"></script>
+</body>
+
+</html>
