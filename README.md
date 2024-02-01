@@ -28,7 +28,7 @@ Solution No 2: Sa Nawawalang Background in Login and Sign Up Pages.
     background-image: url("/images/login_bg.jpg");
     
   Add:
-    ackground-image: url("/EcommerceAdminDashboad_SoftwareEngineering-main/images/login_bg.jpg");
+    background-image: url("/EcommerceAdminDashboad_SoftwareEngineering-main/images/login_bg.jpg");
     
 ---------------------------------------------------------------------------------------------------
 
